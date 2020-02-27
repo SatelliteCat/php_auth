@@ -10,6 +10,10 @@ session_start();
 
 class RegisterController extends BaseController
 {
+    /**
+     * Validation and registration of a new user
+     * @return array
+     */
     public function register()
     {
         $name = $_POST['name'];

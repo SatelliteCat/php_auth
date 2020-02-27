@@ -11,6 +11,10 @@ use vendor\models\User;
 
 class LoginController extends BaseController
 {
+    /**
+     * Validation and authorisation
+     * @return array
+     */
     public function login()
     {
         $phone = $_POST['phone'];

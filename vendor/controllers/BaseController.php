@@ -24,6 +24,10 @@ abstract class BaseController
     );
     private $default_language = 'en';
 
+    /**
+     * BaseController constructor.
+     * User language definition
+     */
     public function __construct()
     {
         $header_lang = \Locale::getPrimaryLanguage($_SERVER['HTTP_ACCEPT_LANGUAGE']);
@@ -40,6 +44,7 @@ abstract class BaseController
     }
 
     /**
+     * Getting user language
      * @return mixed
      */
     public function getSourceLang()

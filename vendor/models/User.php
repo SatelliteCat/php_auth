@@ -13,6 +13,12 @@ class User extends BaseModel
 
     private $mysqli;
 
+    /**
+     * New user registration
+     *
+     * Upon successful creation, the user will have an id
+     * Else id = -1
+     */
     public function create()
     {
         $this->mysqli = $this->getMysqli();
@@ -36,10 +42,14 @@ class User extends BaseModel
 
             $this->mysqli->close();
         }
-
-        return ($this->id) ? 1 : 0;
     }
 
+    /**
+     * Receiving user data
+     * @param $phone
+     * @param $password
+     * @return bool
+     */
     function getUser($phone, $password)
     {
         $this->mysqli = $this->getMysqli();
