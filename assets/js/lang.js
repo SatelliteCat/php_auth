@@ -1,0 +1,30 @@
+export const source = {
+    en: {
+        empty_name: 'Empty name',
+        error_name: 'Wrong name',
+        empty_email: 'Empty email',
+        error_email: 'Wrong email',
+        empty_phone: 'Empty number phone',
+        error_phone: 'Wrong number phone',
+        empty_password: 'Empty password',
+        error_password: 'Wrong length password',
+        error_password_conf: 'Passwords not confirmed',
+        empty_image: 'Provide image',
+        error_image_size: 'Wrong size image',
+        error_image_type: 'Wrong type image',
+    },
+    ru: {
+        empty_name: 'Введите полное имя',
+        error_name: 'Неверное имя',
+        empty_email: 'Введите адрес электронной почты',
+        error_email: 'Неверный адрес электронной почты',
+        empty_phone: 'Введите номер телефона',
+        error_phone: 'Неверный номер телефона',
+        empty_password: 'Введите пароль',
+        error_password: 'Неверная длина пароля',
+        error_password_conf: 'Пароли не совпадают',
+        empty_image: 'Выберите изображение',
+        error_image_size: 'Размер файла слишком велик',
+        error_image_type: 'Неверный тип изображения',
+    }
+};

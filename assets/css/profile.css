@@ -1,0 +1,84 @@
+
+
+body {
+    margin: 0;
+    font-family: Lora, sans-serif;
+    color: #333;
+}
+
+.card {
+    position: relative;
+    width: 315px; /* Remove for full width */
+    height: 450px; /* Remove for full width */
+    margin: 30px auto;
+    box-shadow: 0 0 100px rgba(0, 0, 0, .3);
+}
+
+.card-header {
+    position: relative;
+    height: 220px;
+    background-size: cover;
+    background-position: top;
+}
+
+.card-header:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(5, 85, 134), rgba(181, 181, 181, 0.1));
+}
+
+.card-header-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    width: 100%;
+}
+
+svg .polygon {
+    fill: #fff;
+}
+
+.card-header-slanted-edge {
+    position: absolute;
+    bottom: -3px;
+    z-index: 1;
+    width: 100%;
+    right: 0;
+    left: 0;
+}
+
+.card-body {
+    text-align: center;
+    padding-left: 10px;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.bio {
+    font-size: 14px;
+    color: #7B7B7B;
+    font-weight: 300;
+    margin: 10px auto;
+    line-height: 20px;
+}
+
+.social-accounts img {
+    width: 25px;
+}
+
+.social-accounts a {
+    margin-left: 10px;
+}
+
+.social-accounts a:first-child {
+    margin-left: 0;
+}
+

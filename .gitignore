@@ -1,0 +1,6 @@
+# IDE
+.idea/
+.vcode/
+
+# DB data
+db/data/
