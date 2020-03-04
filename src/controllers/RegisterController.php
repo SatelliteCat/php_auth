@@ -1,11 +1,11 @@
 <?php
 
-namespace vendor\controllers;
+namespace src\controllers;
+session_start();
+
 require_once '../../autoloader.php';
 
-use vendor\models\User;
-
-session_start();
+use src\models\User;
 
 
 class RegisterController extends BaseController
@@ -44,7 +44,7 @@ class RegisterController extends BaseController
         elseif ($password !== $password_confirm)
             $response['message'] = $this->source_lang['error_password_conf'];
         else {
-            $upload_path = 'uploads/' . time() . rand(100, 1000) . '.' . explode('/', $image['type'])[1];
+            $upload_path = 'uploads/' . time() . $phone . '.' . explode('/', $image['type'])[1];
 
             if (!move_uploaded_file($image['tmp_name'], '../../' . $upload_path) && $image['error'])
                 $response['message'] = $this->source_lang['error_image_upload'];
@@ -58,10 +58,10 @@ class RegisterController extends BaseController
 
                 $res = $user->create();
 
-                if (!$res)
-                    $response['message'] = $this->source_lang['error_user_create'];
-                elseif ($user->getId() === -1)
+                if ($user->getId() === -1)
                     $response['message'] = $this->source_lang['error_phone_exist'];
+                elseif (!$res)
+                    $response['message'] = $this->source_lang['error_user_create'];
                 else {
                     $_SESSION['user'] = serialize($user);
                     $response['status'] = true;

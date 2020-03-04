@@ -1,6 +1,6 @@
 <?php
 
-namespace vendor\models;
+namespace src\models;
 
 abstract class BaseModel
 {
@@ -9,24 +9,24 @@ abstract class BaseModel
     const DB_PASSWORD = 'example';
     const DB_NAME = 'php_auth';
 
-    private $mysqli;
+    private $pdo;
 
     public function __construct()
     {
-        $this->mysqli = new \mysqli
+        $dsn = "mysql:host=" . self::DB_HOST . ";dbname=" . self::DB_NAME;
+        $this->pdo = new \PDO
         (
-            self::DB_HOST,
+            $dsn,
             self::DB_USERNAME,
-            self::DB_PASSWORD,
-            self::DB_NAME
+            self::DB_PASSWORD
         );
     }
 
     /**
-     * @return \mysqli
+     * @return \PDO
      */
-    public function getMysqli()
+    public function getPdo()
     {
-        return $this->mysqli;
+        return $this->pdo;
     }
 }

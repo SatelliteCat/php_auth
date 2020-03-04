@@ -1,6 +1,10 @@
 # IDE
 .idea/
-.vcode/
+.vscode/
 
 # DB data
 db/data/
+uploads/
+
+# Composer
+vendor/

@@ -1,12 +1,11 @@
 <?php
 
-namespace vendor\controllers;
+namespace src\controllers;
 session_start();
 
 require_once '../../autoloader.php';
-require_once '../languages/en.php';
 
-use vendor\models\User;
+use src\models\User;
 
 
 class LoginController extends BaseController

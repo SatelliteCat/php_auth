@@ -1,8 +1,8 @@
 <?php
 
-namespace vendor\languages;
+namespace src\languages;
 
-$lang = array(
+return $lang = array(
     'title_auth' => 'Авторизация',
     'title_profile' => 'Профиль',
     'header_home' => 'Профиль',

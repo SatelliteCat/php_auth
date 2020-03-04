@@ -28,7 +28,7 @@ $('.btn-login').click(function (e) {
 
     if (!result.length) {
         $.ajax({
-            url: 'vendor/controllers/LoginController.php',
+            url: 'src/controllers/LoginController.php',
             type: 'POST',
             dataType: 'json',
             processData: false,
@@ -80,7 +80,7 @@ $('.btn-reg').click(function (e) {
 
     if (!res.length) {
         $.ajax({
-            url: '../../vendor/controllers/RegisterController.php',
+            url: '../../src/controllers/RegisterController.php',
             type: 'POST',
             dataType: 'json',
             processData: false,
@@ -112,7 +112,7 @@ $('.btn-logout').click(function (e) {
     e.preventDefault();
 
     $.ajax({
-        url: '../../vendor/controllers/LogoutController.php',
+        url: '../../src/controllers/LogoutController.php',
         type: 'GET',
         success(data) {
             document.location.reload();
